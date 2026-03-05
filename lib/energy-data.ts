@@ -55,7 +55,7 @@ export const hourlyUsageData: HourlyUsage[] = [
   { time: "11 PM", consumption: 1.6, solar: 0 },
 ]
 
-export const RATE_PER_KWH = 0.14 // dollars per kWh
+export const RATE_PER_KWH = 8.5 // rupees per kWh
 export const CURRENT_POWER_KW = 4.72 // simulated live reading
 export const DAILY_TOTAL_KWH = 99.7
 export const MONTHLY_ESTIMATE_KWH = 2842

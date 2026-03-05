@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import {
   Table,
   TableBody,
@@ -60,12 +61,12 @@ export function ApplianceTable() {
           </TableHeader>
           <TableBody>
             {appliances.map((appliance) => (
-              <TableRow key={appliance.id}>
+              <TableRow key={appliance.id} className="cursor-pointer transition-colors hover:bg-accent/50">
                 <TableCell>
-                  <div>
+                  <Link href={`/appliance/${appliance.id}`} className="flex flex-col">
                     <span className="font-medium text-foreground">{appliance.name}</span>
-                    <span className="block text-xs text-muted-foreground">{appliance.category}</span>
-                  </div>
+                    <span className="text-xs text-muted-foreground">{appliance.category}</span>
+                  </Link>
                 </TableCell>
                 <TableCell>
                   <StatusBadge status={appliance.status} />
@@ -92,7 +93,7 @@ export function ApplianceTable() {
                   {appliance.dailyUsage.toFixed(1)}
                 </TableCell>
                 <TableCell className="text-right font-mono text-sm text-foreground hidden md:table-cell">
-                  ${(appliance.dailyUsage * RATE_PER_KWH).toFixed(2)}
+                  {"\u20B9"}{(appliance.dailyUsage * RATE_PER_KWH).toFixed(2)}
                 </TableCell>
               </TableRow>
             ))}

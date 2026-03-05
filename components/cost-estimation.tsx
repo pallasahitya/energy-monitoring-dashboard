@@ -24,7 +24,7 @@ export function CostEstimation() {
       <CardHeader>
         <CardTitle>Cost Breakdown</CardTitle>
         <CardDescription>
-          Rate: ${RATE_PER_KWH.toFixed(2)} / kWh
+          {"Rate: \u20B9"}{RATE_PER_KWH.toFixed(2)} / kWh
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -35,7 +35,7 @@ export function CostEstimation() {
               <div key={item.label} className="flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">{item.label}</span>
                 <span className={`text-sm font-mono font-medium ${item.isCredit ? "text-primary" : "text-foreground"}`}>
-                  {item.isCredit ? "-" : ""}${(item.kwh * item.rate).toFixed(2)}
+                  {item.isCredit ? "-" : ""}{"\u20B9"}{(item.kwh * item.rate).toFixed(2)}
                 </span>
               </div>
             ))}
@@ -48,7 +48,7 @@ export function CostEstimation() {
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium text-foreground">Net cost today</span>
             <span className="text-lg font-bold font-mono text-foreground">
-              ${netDailyCost.toFixed(2)}
+              {"\u20B9"}{netDailyCost.toFixed(2)}
             </span>
           </div>
 
@@ -60,19 +60,19 @@ export function CostEstimation() {
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Monthly estimate</span>
               <span className="text-sm font-mono font-medium text-foreground">
-                ${monthlyEstimate.toFixed(2)}
+                {"\u20B9"}{monthlyEstimate.toFixed(2)}
               </span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">Monthly solar savings</span>
               <span className="text-sm font-mono font-medium text-primary">
-                -${monthlySavings.toFixed(2)}
+                -{"\u20B9"}{monthlySavings.toFixed(2)}
               </span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-foreground">Projected monthly bill</span>
               <span className="text-lg font-bold font-mono text-foreground">
-                ${(monthlyEstimate - monthlySavings).toFixed(2)}
+                {"\u20B9"}{(monthlyEstimate - monthlySavings).toFixed(2)}
               </span>
             </div>
           </div>
