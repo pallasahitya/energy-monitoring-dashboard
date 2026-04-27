@@ -48,8 +48,8 @@ A smart dashboard to track energy usage, costs, analytics, and trends.
 - React
 - Tailwind CSS
 
-## Author
-Sivani Sahitya Palla 
-Rupa Sai Vyshnavi Allaka
-Tanusree Gavarasani
+## Authors
+Sivani Sahitya Palla,
+Rupa Sai Vyshnavi Allaka,
+Tanusree Gavarasani,
 Prasanna Satvika Billakurthi
